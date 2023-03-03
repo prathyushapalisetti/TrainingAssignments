@@ -1,0 +1,28 @@
+package com.capgemini.university_course_selection.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.university_course_selection.entity.Login;
+import com.capgemini.university_course_selection.exception.IdAlreadyExistsException;
+import com.capgemini.university_course_selection.service.LoginService;
+
+
+@RestController
+public class LoginController {
+	@Autowired
+	private LoginService logService;
+	
+	@PostMapping("/saveLogin")
+	public ResponseEntity<Login> saveLogin(@RequestBody Login log1 ) throws IdAlreadyExistsException {
+		Login savedLog = logService.saveLogin(log1);
+		return new ResponseEntity<Login>(savedLog, HttpStatus.CREATED);
+	
+		
+	}
+}
+	

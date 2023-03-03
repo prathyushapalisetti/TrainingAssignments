@@ -1,0 +1,43 @@
+package com.example.demo_nvspringboot.entityManagerFactory;
+
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.Setter;
+import lombok.ToString;
+
+
+@javax.persistence.Entity
+@Table(name = "employee_rest")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@EqualsAndHashCode
+public class Employee {
+	
+    @Id
+	private int id;
+    
+    @NonNull
+	private String firstName;
+	private String lastName;
+	
+//	@Setter(AccessLevel.PROTECTED)
+	private int age;
+
+	public Integer getId() {
+		return null;
+	}
+
+
+
+}

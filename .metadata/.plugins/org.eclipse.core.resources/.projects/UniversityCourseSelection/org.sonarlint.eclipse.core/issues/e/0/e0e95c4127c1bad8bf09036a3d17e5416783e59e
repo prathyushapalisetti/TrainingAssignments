@@ -1,0 +1,19 @@
+
+x
+java:S1192P"IDefine a constant instead of duplicating this literal "commitee" 4 times.(†ØòÉH«RCRITICALZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖßÒºûÿÿÿÿH±RMINORZ
+CODE_SMELL
+w
+java:S4684J"@Replace this persistent entity with a simple POJO or DTO object.(ÈúÿÿÿÿÿH³RCRITICALZVULNERABILITY
+^
+java:S1153‘"1Directly append the argument of String.valueOf().(û’Š¸H°RMINORZ
+CODE_SMELL
+w
+java:S46844"@Replace this persistent entity with a simple POJO or DTO object.(ì€”ØşÿÿÿÿH²RCRITICALZVULNERABILITY
+‰
+java:S1192U"ZDefine a constant instead of duplicating this literal "/login/commitee to login." 4 times.(­Áö”H¢RCRITICALZ
+CODE_SMELL
+Û
+java:S1192e"¦Define a constant instead of duplicating this literal "Accessible to commitee members only. If you are a registered commitee member, click http://localhost:" 3 times.(»¹ÍšùÿÿÿÿH§RCRITICALZ
+CODE_SMELL

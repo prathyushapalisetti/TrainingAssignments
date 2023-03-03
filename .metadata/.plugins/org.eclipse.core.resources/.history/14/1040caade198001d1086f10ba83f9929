@@ -1,0 +1,14 @@
+package com.capgemini.university_course_selection.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.capgemini.university_course_selection.entity.Staff;
+
+@Repository
+public interface StaffRepository  extends JpaRepository<Staff, Long>{
+
+	//boolean existsByStaff_Name(String Staff_Name);
+
+
+}

@@ -1,0 +1,9 @@
+
+
+java:S1192 "PDefine a constant instead of duplicating this literal "Staff with id: " 3 times.(ΧΪ„HζRCRITICALZ
+CODE_SMELL
+{
+java:S1192 "LDefine a constant instead of duplicating this literal " not found!" 3 times.(ΧΪ„HκRCRITICALZ
+CODE_SMELL
+	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(£γόÿÿÿÿHξRMINORZ
+CODE_SMELL

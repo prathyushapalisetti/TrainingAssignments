@@ -1,0 +1,66 @@
+package com.capgemini.university_course_selection.Controller;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import com.capgemini.university_course_selection.controller.StaffController;
+import com.capgemini.university_course_selection.entity.Staff;
+
+public class StaffControllerTest {
+	
+	@InjectMocks
+	StaffController  controller;
+
+	@Mock
+	StaffDao dao;
+
+	@Before
+	public void init() {
+		MockitoAnnotations.openMocks(this);
+	}
+	
+	@Test
+	public void saveStaffTest()
+	{
+		List<Staff> list = new ArrayList<Staff>();
+		Staff stOne = new Staff(1, "John", "AssistantLecturer" );
+		Staff stTwo = new Staff(2, "Alex", "Professor" );
+	    Staff stThree = new Staff(3, "Steve", "Principal");
+
+		list.add(stOne);
+		list.add(stTwo);
+		list.add(stThree);
+		
+		when(dao.saveStaffList()).thenReturn(list);
+		
+		List<Staff> stList = controller.saveStaffList();
+
+		assertEquals(3, stList.size());
+		verify(dao, times(1)).saveStaffList();
+		
+		@Test
+		public void saveStaffByIdTest()
+		{
+			when(dao.getStaffById(1)).thenReturn(new Staff(1,"Lokesh","principal"));
+
+			Staff st = controller.saveStaffById(1);
+
+			assertEquals("1", st.saveStaff_Id());
+			assertEquals("Lokesh", st.saveStaff_Role());
+			assertEquals("principal", st.saveStaff_Name());
+			
+	}
+	
+	}
+
+

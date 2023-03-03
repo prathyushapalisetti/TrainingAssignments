@@ -1,0 +1,12 @@
+package com.capgemini.university_course_selection.service;
+
+import com.capgemini.university_course_selection.entity.Login;
+
+public interface LoginService {
+
+	Login getLogin(Login log);
+	 
+
+   
+
+}

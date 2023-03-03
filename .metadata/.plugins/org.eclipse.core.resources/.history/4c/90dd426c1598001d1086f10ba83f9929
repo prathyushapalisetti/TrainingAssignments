@@ -1,0 +1,5 @@
+package com.capgemini.university_course_selection.controller;
+
+public class AdminController {
+
+}

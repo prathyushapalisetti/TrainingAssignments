@@ -1,0 +1,17 @@
+package com.capgemini.university_course_selection.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Admin {
+	
+	@Id
+	private long adminId;
+	
+	private String adminPassword;
+	
+	private String adminName;
+	
+
+}

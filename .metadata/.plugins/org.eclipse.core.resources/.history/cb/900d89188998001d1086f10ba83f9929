@@ -1,0 +1,21 @@
+package com.capgemini.university_course_selection.exception;
+
+public class StaffAlreadyExistsException {
+
+	private String msg;
+	
+	public StaffAlreadyExistsException(String msg) {
+		super();
+		this.msg = msg;
+	}
+	
+	public StaffAlreadyExistsException() {
+		super();
+	}
+
+}
+
+
+	
+	
+

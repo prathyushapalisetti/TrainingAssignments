@@ -1,0 +1,23 @@
+
+€
+java:S11923"LDefine a constant instead of duplicating this literal "staffMember" 7 times.(âñ®ÇùÿÿÿÿHÍRCRITICALZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖßÒºûÿÿÿÿHÜRMINORZ
+CODE_SMELL
+‘
+java:S11925"]Define a constant instead of duplicating this literal "/login/staffMember to login." 6 times.(ÂÜñ©øÿÿÿÿHÆRCRITICALZ
+CODE_SMELL
+r
+java:S4684@"@Replace this persistent entity with a simple POJO or DTO object.(è™Å¿HßRCRITICALZVULNERABILITY
+w
+java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(±ÆÂ‹ÿÿÿÿÿHáRCRITICALZVULNERABILITY
+Í
+java:S11925"˜Define a constant instead of duplicating this literal "Accessible to staff only. If you are a registered staff member, click http://localhost:" 6 times.(ÂÜñ©øÿÿÿÿHÕRCRITICALZ
+CODE_SMELL
+w
+java:S46842"@Replace this persistent entity with a simple POJO or DTO object.(¸Œ•ÛıÿÿÿÿHŞRCRITICALZVULNERABILITY
+r
+java:S1126+"AReplace this if-then-else statement by a single return statement.(óˆûÿÿÿÿHİRMINORZ
+CODE_SMELL
+r
+java:S4684r"@Replace this persistent entity with a simple POJO or DTO object.(‚¿’ÿHàRCRITICALZVULNERABILITY

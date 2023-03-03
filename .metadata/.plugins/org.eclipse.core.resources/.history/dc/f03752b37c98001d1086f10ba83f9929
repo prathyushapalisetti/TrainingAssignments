@@ -1,0 +1,16 @@
+/*
+ * package com.capgemini.university_course_selection.exception;
+ * 
+ * public class AdminException extends Exception {
+ * 
+ * private static final long serialVersionUID = -3076816126663208785L;
+ * 
+ * public AdminException() { super(); }
+ * 
+ * public AdminException(String message) { super(message); }
+ * 
+ * }
+ * 
+ * 
+ */
+

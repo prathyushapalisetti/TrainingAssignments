@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="spring-core"/>
+			<item value="JavaUnitTesting"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="spring-core"/>
+			<item value="JavaUnitTesting"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="springmvc-br"/>
+			<item value="springmvc-mv"/>
+			<item value="springmvc"/>
+			<item value="springmvc-nv1"/>
+			<item value="springmvc-nv"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="springmvc-br"/>
+			<item value="springmvc-mv"/>
+			<item value="springmvc"/>
+			<item value="springmvc-nv1"/>
+			<item value="springmvc-nv"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\msmou\Desktop\UniversityCourseSelection2\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Desktop\UniversityCourseSelection\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Downloads\HelloSpringBoot"/>
+			<item value="C:\Users\msmou\Downloads\demohelloapp1"/>
+			<item value="C:\Users\msmou\Downloads\Hello"/>
+			<item value="C:\Users\msmou\Downloads\HelloBoot\demohelloBoot"/>
+			<item value="C:\Users\msmou\Downloads\helloapp"/>
+			<item value="C:\Users\msmou\Downloads\HelloDocker\demohello"/>
+			<item value="C:\Users\msmou\Downloads\SpringHelloApp"/>
+			<item value="C:\Users\msmou\Downloads\demo"/>
+			<item value="C:\Users\msmou\Desktop\UniversityCourseSelection1\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Documents\UniversityCourseSelection\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Documents\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Downloads\UniversityCourseSelection"/>
+			<item value="C:\Users\msmou\Downloads\spring-boot-course-app-master"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

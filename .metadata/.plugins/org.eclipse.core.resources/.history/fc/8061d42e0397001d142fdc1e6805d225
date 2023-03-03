@@ -1,0 +1,28 @@
+package com.capgemini.university_course_selection.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.university_course_selection.entity.LoginEntity;
+import com.capgemini.university_course_selection.repository.LoginRepository;
+
+@Service
+public class LoginServiceImpl implements LoginService {
+	
+	@Autowired
+	private LoginRepository logRepo;
+	
+
+	@Override
+	public LoginEntity getLogin(LoginEntity log1) {
+		LoginEntity log=logRepo.save(log1);
+		return log;
+	}
+
+	@Override
+	public Login getLogin(Login log1) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

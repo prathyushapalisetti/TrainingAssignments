@@ -1,0 +1,57 @@
+package com.UniversityCourseSelection;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import java.util.ArrayList;
+import java.util.List;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+import com.UniversityCourseSelection.entities.Admin;
+import com.UniversityCourseSelection.repositories.AdminRepository;
+import com.UniversityCourseSelection.services.AdminServiceImpl;
+
+
+
+@ExtendWith(MockitoExtension.class)
+public class AdminServiceImplTest1 {
+	@Mock
+	private AdminRepository adminRepo;
+	
+	
+	@InjectMocks
+	private AdminServiceImpl serviceMock;
+	
+	Admin ad;
+	
+	List<Admin>  adminList=new ArrayList<>();
+	@BeforeEach
+	public void setup() {
+		adminList.add(new Admin());//1
+		adminList.add(new Admin());//2
+		serviceMock = new AdminServiceImpl();
+		MockitoAnnotations.openMocks(this);
+	}
+	
+	@Test
+	public void testSaveAdmin() {
+		when(adminRepo.findAll()).thenReturn(adminList);
+		assertEquals(adminList, serviceMock.SaveAdmin());
+		verify(adminRepo,times(1)).findAll();
+	}
+	
+	
+	@Test
+	public void testGetAdmin() {
+		when(adminRepo.findAll()).thenReturn(adminList);
+		assertEquals(adminList, serviceMock.getAdmin());
+		verify(adminRepo,times(1)).findAll();
+
+    }
+}

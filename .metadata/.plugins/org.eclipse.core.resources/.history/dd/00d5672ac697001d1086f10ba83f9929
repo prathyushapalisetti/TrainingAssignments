@@ -1,0 +1,5 @@
+package com.capgemini.university_course_selection.exception;
+
+public class StudentAlreadyExistsException {
+
+}

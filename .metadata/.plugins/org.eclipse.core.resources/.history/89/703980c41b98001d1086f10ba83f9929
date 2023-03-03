@@ -1,0 +1,70 @@
+package com.capgemini.university_course_selection.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.university_course_selection.entity.Login;
+import com.capgemini.university_course_selection.exception.AdminException;
+import com.capgemini.university_course_selection.repository.AdminRepository;
+
+public class AdminServiceImpl implements AdminService {
+	
+	@Autowired
+	AdminRepository adminRepo;
+
+	@Override
+	public String getAdminDetails(Login log) throws AdminException {
+		
+		try {
+			
+			validateRequest (log);
+			
+			Admin admin = adminRepo.findByAdminNameAndAdminPassword(log.getUserName(), log.getPassword());
+			
+			if(admin != null) {
+				return String.valueOf(admin.getAdminId());
+				
+			}else {
+				return "User not found";
+			}
+			
+		}catch (AdminException ae) {
+			return ae.getMessage();
+			
+		}
+		catch (Exception e) {
+			throw new AdminException("Error while processing your request");
+		}
+	}
+	
+	private void validateRequest(Login log) throws AdminException{
+		
+		if(log == null) {
+			throw new AdminException("Invalid Request");
+			
+		}
+		else if ((log.getUserName() == null || log.getUserName().isBlank())
+				&& (log.getPassword() == null || log.getPassword().isBlank())) {
+			
+		
+			throw new AdminException("Provide UserName and Password");
+		}
+		else if ((log.getUserName() == null || log.getUserName().isBlank())) {
+			throw new AdminException("Provide UserName");
+		}
+		else if ((log.getPassword() == null || log.getPassword().isBlank())) {
+			throw new AdminException("Provide Password");
+			
+		}else {
+			
+			System.out.println("Valid Request");
+		}
+    }
+}
+		
+		
+		
+		
+		
+
+
+

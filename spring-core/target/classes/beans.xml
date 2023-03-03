@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <!-- setter injection- property tag -->
+   
+   <bean id="emp" class="com.springcore.Employee">
+       <property name="empName" value="prathyu"></property>
+   </bean>
+   
+    <bean id="emp1" class="com.springcore.Employee">
+       <property name="empName" value="mouni"></property>
+   </bean>
+   
+   <!-- constructor injection- constructor-arg tag -->
+   
+   <bean id="emp2" class="com.springcore.Employee">
+       <constructor-arg name="empName" value="banti"></constructor-arg>
+       </bean> 
+       
+       <bean id="emp4" class="com.springcore.Employee" scope="prototype">
+       
+       </bean>
+</beans>

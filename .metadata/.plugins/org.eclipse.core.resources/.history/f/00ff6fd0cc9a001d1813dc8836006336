@@ -1,0 +1,38 @@
+package com.UniversityCourseSelection;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.UniversityCourseSelection.entities.Admin;
+import com.UniversityCourseSelection.repositories.AdminRepository;
+import com.UniversityCourseSelection.services.AdminServiceImpl;
+
+
+
+
+@ExtendWith(MockitoExtension.class)
+public class AdminServiceImplTest {
+	
+	@Mock
+	private AdminRepository adminRepo;
+	
+	@InjectMocks
+	private AdminServiceImpl serviceMock;
+	
+	Admin ad;
+	
+	List<Admin> adminList=new ArrayList<>();
+	public void setup() {
+		adminList.add(new Admin());//1
+		adminList.add(new Admin());//2
+		serviceMock = new AdminServiceImpl();
+		MockitoAnnotations.openMocks(this);
+	}
+
+}

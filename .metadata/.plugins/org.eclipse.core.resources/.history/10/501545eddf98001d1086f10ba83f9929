@@ -1,0 +1,42 @@
+package com.capgemini.university_course_selection.service;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.capgemini.university_course_selection.entity.Staff;
+import com.capgemini.university_course_selection.repository.StaffRepository;
+
+@ExtendWith(MockitoExtension.class)
+class StaffServiceImplTest {
+
+	@Mock
+	private StaffRepository sRepo;
+
+	@InjectMocks
+	private StaffServiceImpl serviceMock;
+
+	Staff staff;
+
+	@BeforeEach
+	public void setup() {
+		serviceMock = new StaffServiceImpl();
+		MockitoAnnotations.openMocks(this);
+	}
+
+	@Test
+	public void testSaveStaff() {
+		Staff s = new Staff();
+		when(sRepo.save(s)).thenReturn(s);
+		Staff result = serviceMock.saveStaff(s);
+		assertEquals(s, result);
+	}
+
+}

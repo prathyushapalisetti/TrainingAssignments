@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;HelloWorld.demohello.Controller&apos; to &apos;HelloWorld.demohello.controller&apos;&#x0D;&#x0A;- Original project: &apos;demohello&apos;&#x0D;&#x0A;- Original element: &apos;demohello/src/main/java/HelloWorld.demohello.Controller&apos;&#x0D;&#x0A;- Renamed element: &apos;demohello/src/main/java/HelloWorld.demohello.controller&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;HelloWorld.demohello.Controller&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;HelloWorld.demohello.Controller" name="HelloWorld.demohello.controller" qualified="false" references="true" stamp="1675074924152" textual="false" version="1.0"/>
+</session>

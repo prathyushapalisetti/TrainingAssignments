@@ -1,0 +1,28 @@
+package com.capgemini.university_course_selection.entity;
+
+/*
+ * import jakarta.persistence.Entity;
+ * 
+ * import jakarta.persistence.Id; import jakarta.persistence.Table; import
+ * lombok.Data; import lombok.ToString;
+ */
+
+/*
+ * @Entity
+ * 
+ * @ToString
+ * 
+ * @Data
+ * 
+ * @Table(name = "list") public class Admin {
+ * 
+ * @Id private long adminId;
+ * 
+ * private String adminPassword;
+ * 
+ * private String adminName;
+ 
+ 
+ * 
+ * }
+ */

@@ -1,0 +1,39 @@
+
+Š
+java:S2293X"YReplace the type specification in this constructor call with the diamond operator ("<>").(¥Íš¹ùÿÿÿÿHïRMINORZ
+CODE_SMELL
+Š
+java:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀÇªêùÿÿÿÿHëRMINORZ
+CODE_SMELL
+‡
+java:S1192"XDefine a constant instead of duplicating this literal "User already logged in!" 3 times.(þ¬óíH÷RCRITICALZ
+CODE_SMELL
+…
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(þ¬óíHáRMINORZ
+CODE_SMELL
+…
+java:S22930"YReplace the type specification in this constructor call with the diamond operator ("<>").(þ¬óíHåRMINORZ
+CODE_SMELL
+Š
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀÇªêùÿÿÿÿHãRMINORZ
+CODE_SMELL
+…
+java:S2293B"YReplace the type specification in this constructor call with the diamond operator ("<>").(þ¬óíHéRMINORZ
+CODE_SMELL
+Š
+java:S2293T"YReplace the type specification in this constructor call with the diamond operator ("<>").(½Ô©ÿýÿÿÿÿHíRMINORZ
+CODE_SMELL
+Š
+java:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÀÇªêùÿÿÿÿHçRMINORZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÖßÒºûÿÿÿÿHÿRMINORZ
+CODE_SMELL
+ˆ
+java:S1192'"TDefine a constant instead of duplicating this literal "Invalid Credentials" 3 times.(ÀÇªêùÿÿÿÿHûRCRITICALZ
+CODE_SMELL
+†
+java:S1192%"XDefine a constant instead of duplicating this literal "Logged in successfully!" 3 times.(Á¯®uHóRCRITICALZ
+CODE_SMELL
+Š
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(½Ô©ÿýÿÿÿÿHñRMINORZ
+CODE_SMELL

@@ -1,0 +1,28 @@
+package com.capgemini.university_course_selection.entity;
+
+import jakarta.persistence.Entity;
+
+
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Setter
+@Table(name = "universitycourseselection")
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+@Entity
+public class LoginEntity {
+	@Id
+	private long studentId;
+	@Size(min = 5, message = "password must be at least 5 characters long")
+	private String password;
+	  
+
+}

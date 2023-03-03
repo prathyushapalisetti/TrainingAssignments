@@ -1,0 +1,27 @@
+package com.example.demo_nvspringboot.EmployeeService;
+
+import java.util.List;
+
+
+import java.util.Optional;
+
+import com.example.demo_nvspringboot.entityManagerFactory.Employee;
+import com.example.demo_nvspringboot.exception.EmployeeAlreadyExistsException;
+
+public interface EmployeeService {
+	
+	Employee saveEmployee(Employee emp) throws EmployeeAlreadyExistsException;
+	
+	List<Employee> getAllEmployees();
+	
+	Optional<Employee> getEmployeeById(int id);
+	
+	String deleteEmployeeById(int id);
+	
+	Employee updateEmployee(Employee emp);
+	
+	List<Employee> getEmployeeByFirstName(String firstName);
+	
+	
+
+}

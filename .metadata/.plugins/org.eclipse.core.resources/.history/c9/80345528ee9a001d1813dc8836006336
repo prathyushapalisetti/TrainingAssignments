@@ -1,0 +1,81 @@
+package com.UniversityCourseSelection;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+
+
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.UniversityCourseSelection.entities.Admin;
+import com.UniversityCourseSelection.exceptions.AdminAlreadyExists;
+import com.UniversityCourseSelection.repositories.AdminRepository;
+import com.UniversityCourseSelection.services.AdminServiceImpl;
+
+@ExtendWith(MockitoExtension.class)
+ class AdminServiceImplTest {
+
+    @InjectMocks
+    private AdminServiceImpl adminService;
+
+    @Mock
+    private AdminRepository adminRepo;
+    
+    List<Admin>  adminList=new ArrayList<>();
+	@BeforeEach
+	public void setup() {
+		adminList.add(new Admin());//1
+		adminList.add(new Admin());//2
+		adminService = new AdminServiceImpl();
+		MockitoAnnotations.openMocks(this);
+	}
+
+    @Test
+    void testSaveAdmin() throws AdminAlreadyExists {
+        
+        Admin ad = new Admin(1, "777777");
+        when(adminRepo.existsById(ad.getAdmin_Id())).thenReturn(true);
+        Assertions.assertThrows(AdminAlreadyExists.class, () -> adminService.saveAdmin(ad));
+        
+    }
+        
+    @Test
+	public void testGetAdmin() {
+		when(adminRepo.findAll()).thenReturn(adminList);
+		assertEquals(adminList, adminService.getAdmin());
+		verify(adminRepo,times(1)).findAll();
+
+    }
+    
+    @Test
+    public void testLoginAdmin() {
+       
+        Admin ad = new Admin(1, "77779080");
+        Optional<Admin> admin = Optional.of(ad);
+        when(adminRepo.findById(ad.getAdmin_Id())).thenReturn(admin);
+        String result = adminService.loginAdmin(ad);
+        assertEquals("login successful", result);
+
+        ad = new Admin(2, "9090");
+        admin = Optional.of(ad);
+        when(adminRepo.findById(ad.getAdmin_Id())).thenReturn(admin);
+        result = adminService.loginAdmin(ad);
+        assertEquals("Invalid Id or Password", result);
+}
+        
+      
+}

@@ -1,0 +1,46 @@
+package com.UniversityCourseSelection.entities;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import lombok.Data;
+@Table(name = " universitycourseselection")
+@Data
+@Entity
+public class Admin {
+	@Id
+	private String admin_Id;
+	@Column(name = "admin_Password", length = 10)
+	@NotNull
+	private String admin_Password;
+
+	public String getAdmin_Id() {
+		return admin_Id;
+	}
+
+	public void setAdmin_Id(String admin_Id) {
+		this.admin_Id = admin_Id;
+	}
+
+	public String getAdmin_Password() {
+		return admin_Password;
+	}
+
+	public void setAdmin_Password(String admin_Password) {
+		this.admin_Password = admin_Password;
+	}
+
+	public Admin(String admin_Id, @NotNull String admin_Password) {
+		super();
+		this.admin_Id = admin_Id;
+		this.admin_Password = admin_Password;
+	}
+
+	public Admin() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+}

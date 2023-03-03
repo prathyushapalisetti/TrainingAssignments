@@ -1,0 +1,17 @@
+package com.UniversityCourseSelection.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.UniversityCourseSelection.entities.Admin;
+
+public interface AdminService {
+
+	Admin saveAdmin(Admin ad);
+
+	List<Admin> getAdmin();
+
+	String loginAdmin(Admin ad);
+
+
+}

@@ -1,0 +1,29 @@
+package com.capgemini.university_course_selection.service;
+
+import java.util.List;
+
+import java.util.Optional;
+
+import com.capgemini.university_course_selection.entity.Staff;
+
+
+public interface StaffService {
+	
+Staff saveStaff(Staff s) ;
+	
+	List<Staff> getAllStaff();
+
+	Optional<Staff> getStaffById(long Id);
+
+	void deleteStaffById(long Id);
+
+	Staff updateStaffById(Staff st);
+
+
+
+	void deleteStaffById(Long Id);
+
+}
+	
+
+

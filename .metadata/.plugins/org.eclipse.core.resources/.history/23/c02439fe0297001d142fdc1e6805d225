@@ -1,0 +1,6 @@
+package com.capgemini.university_course_selection.service;
+
+public interface LoginService {
+	Login getLogin(Login log1);
+
+}

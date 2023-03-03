@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="spring mvc-nv">
+        <property name="context-root" value="spring_mvc-nv"/>
+        <property name="java-output-path" value="/spring mvc-nv/build/classes"/>
+    </wb-module>
+</project-modules>

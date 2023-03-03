@@ -1,0 +1,26 @@
+package com.capgemini.university_course_selection.Controller;
+
+
+import org.aspectj.lang.annotation.Before;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import com.capgemini.university_course_selection.controller.StaffController;
+
+public class StaffControllerTest {
+	
+	@InjectMocks
+	StaffController  controller;
+
+	@Mock
+	Staff dao;
+
+	@Before
+	public void init() {
+		MockitoAnnotations.openMocks(this);
+	}
+	
+	
+
+}

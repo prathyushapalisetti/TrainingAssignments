@@ -1,0 +1,16 @@
+package exceptionhandlingpractice;
+
+public class ExceptionBasics {
+
+	public static void main(String[] args) {
+	
+		try {
+			int div = 100 / 10;
+			System.out.println(div);
+			
+			
+		} catch (ArithmeticException e) {
+			System.out.println("please enter the correct input");
+		}
+	}
+}

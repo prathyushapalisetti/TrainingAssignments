@@ -1,0 +1,21 @@
+package com.UniversityCourseSelection;
+
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.UniversityCourseSelection.repositories.AdminRepository;
+import com.UniversityCourseSelection.services.AdminServiceImpl;
+
+
+@ExtendWith(MockitoExtension.class)
+public class AdminServiceImplTest {
+	
+	@Mock
+	private AdminRepository adminRepo;
+	
+	@InjectMocks
+	private AdminServiceImpl serviceMock;
+
+}

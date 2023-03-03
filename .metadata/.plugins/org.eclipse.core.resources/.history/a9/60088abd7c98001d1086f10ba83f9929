@@ -1,0 +1,13 @@
+package com.capgemini.university_course_selection.service;
+/*
+ * import com.capgemini.university_course_selection.entity.Login; import
+ * com.capgemini.university_course_selection.exception.AdminException;
+ * 
+ * public interface AdminService {
+ * 
+ * public String getAdminDetails1(Login log) throws AdminException;
+ * 
+ * public String getAdminDetails(Login log) throws AdminException;
+ * 
+ * }
+ */

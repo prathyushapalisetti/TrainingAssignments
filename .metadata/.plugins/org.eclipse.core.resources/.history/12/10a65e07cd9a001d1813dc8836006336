@@ -1,0 +1,56 @@
+package com.UniversityCourseSelection;
+
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.UniversityCourseSelection.entities.Admin;
+import com.UniversityCourseSelection.exceptions.AdminAlreadyExists;
+import com.UniversityCourseSelection.repositories.AdminRepository;
+import com.UniversityCourseSelection.services.AdminServiceImpl;
+
+@ExtendWith(MockitoExtension.class)
+public class AdminServiceImplTest {
+
+    @InjectMocks
+    private AdminServiceImpl adminService;
+
+    @Mock
+    private AdminRepository adminRepo;
+
+    @Test
+    public void testSaveAdmin() {
+        
+        Admin ad = new Admin(1, "777777");
+        when(adminRepo.save(ad)).thenReturn(ad);
+        Admin savedAdmin = adminService.saveAdmin(ad);
+        assertNotNull(savedAdmin);
+
+        
+        when(adminRepo.existsById(ad.getAdmin_Id())).thenReturn(true);
+        assertThrows(AdminAlreadyExists.class, () -> adminService.saveAdmin(ad));
+    }
+
+    @Test
+    public void testGetAdmin() {
+        
+        List<Admin> adminList = adminService.getAdmin();
+        assertNotNull(adminList);
+        assertEquals(0, adminList.size());
+
+        
+        Admin ad1 = new Admin(1, "77779080");
+        Admin ad2 = new Admin(2, "90909080");
+        when(adminRepo.findAll()).thenReturn(List.of(ad1, ad2));
+        adminList = adminService.getAdmin();
+        assertNotNull(adminList);
+        assertEquals(2, adminList.size());
+        
+    }
+}
+
+

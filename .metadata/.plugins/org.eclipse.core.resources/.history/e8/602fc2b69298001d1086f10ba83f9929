@@ -1,0 +1,49 @@
+package com.capgemini.university_course_selection.entity;
+
+
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.SequenceGenerator;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@Data
+@Table(name = "staff")
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class Staff {
+	
+    @Id
+    @Column(name = "StaffId")
+    @SequenceGenerator(
+			name = "staffsequence",
+			sequenceName = "staffsequence",
+			allocationSize = 1)
+	@GeneratedValue(
+			strategy = GenerationType.SEQUENCE,
+			generator = "staffsequence")
+	private long Staff_Id;
+	
+    @Column(name = "staffName")
+	private String Staff_Name;
+	
+    @Column(name = "staffRole")
+	private String Staff_Role;
+	
+}
+	
+	
+	

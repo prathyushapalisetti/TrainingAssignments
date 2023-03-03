@@ -1,0 +1,19 @@
+package com.UniversityCourseSelection.services;
+
+import java.util.List;
+
+import org.springframework.validation.annotation.Validated;
+
+import com.UniversityCourseSelection.entities.Admin;
+import com.UniversityCourseSelection.exceptions.AdminAlreadyExists;
+
+public interface AdminService {
+
+	Admin saveAdmin(Admin ad) throws AdminAlreadyExists;
+
+	List<Admin> getAdmin();
+
+	String loginAdmin(Admin ad);
+
+
+}

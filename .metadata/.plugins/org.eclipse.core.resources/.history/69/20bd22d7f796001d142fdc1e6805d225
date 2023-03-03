@@ -1,0 +1,21 @@
+package com.capgemini.university_course_selection.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class LoginEntity {
+	@Id
+	private int studentId;
+	private int password;
+	  
+
+}

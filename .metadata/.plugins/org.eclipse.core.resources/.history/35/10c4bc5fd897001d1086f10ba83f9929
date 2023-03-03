@@ -1,0 +1,13 @@
+package com.capgemini.university_course_selection.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.capgemini.university_course_selection.entity.Login;
+
+public interface LoginRepository extends JpaRepository<Login,Integer> {
+
+	boolean existsById(long studentId);
+	
+	
+
+}

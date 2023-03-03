@@ -1,0 +1,41 @@
+package com.capgemini.university_course_selection.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.stereotype.Service;
+
+import com.capgemini.university_course_selection.entity.Login;
+import com.capgemini.university_course_selection.exception.IdAlreadyExistsException;
+import com.capgemini.university_course_selection.repository.LoginRepository;
+
+
+@Service
+public class LoginServiceImpl implements LoginService {
+	
+	@Autowired
+	private LoginRepository logRepo;
+	
+
+	/*
+	 * @Override public Login saveLogin(Login log1) throws IdAlreadyExistsException
+	 * { if(logRepo.existsById(log1.getStudentId())) throw new
+	 * IdAlreadyExistsException();
+	 * 
+	 * 
+	 * Login log=logRepo.save(log1); return log; }
+	 */
+
+
+	@Override
+	public Login saveLogin(Login log) throws IdAlreadyExistsException {
+		if(logRepo.existsById(log.saveStudentId()))
+			throw new IdAlreadyExistsException();
+			
+			
+		Login log1 = logRepo.save(log1);
+		return log1;
+	
+	}
+
+	
+}

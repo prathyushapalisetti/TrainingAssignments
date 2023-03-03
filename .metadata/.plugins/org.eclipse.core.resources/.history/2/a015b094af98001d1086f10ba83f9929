@@ -1,0 +1,41 @@
+package com.capgemini.university_course_selection.Controller;
+
+
+import java.util.List;
+
+import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import com.capgemini.university_course_selection.controller.StaffController;
+
+public class StaffControllerTest {
+	
+	@InjectMocks
+	StaffController  controller;
+
+	@Mock
+	StaffDao dao;
+
+	@Before
+	public void init() {
+		MockitoAnnotations.openMocks(this);
+	}
+	
+	@Test
+	public void getAllStaffTest()
+	{
+		List<StaffUC> list = new ArrayList<StaffUC>();
+		StaffUC stOne = new StaffUC(1, "John", "AssistantLecturer" );
+		StaffUC stTwo = new StaffUC(2, "Alex", "Professor" );
+	    StaffUC stThree = new StaffUC(3, "Steve", "Principal");
+
+		list.add(stOne);
+		list.add(stTwo);
+		list.add(stThree);
+		
+	}
+
+

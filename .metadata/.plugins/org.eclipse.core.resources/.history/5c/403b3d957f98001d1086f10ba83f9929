@@ -1,0 +1,37 @@
+package com.capgemini.university_course_selection.entity;
+
+import javax.persistence.Column;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Entity
+@Getter
+@Setter
+@Data
+@Table
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
+public class Staff {
+	
+    @Id
+    @Column(name = "staff_id")
+	private long Staff_Id;
+	
+    @Column(name = "staff_name")
+	private String Staff_Name;
+	
+	private String Staff_Role;
+	
+}
+	
+	
+	

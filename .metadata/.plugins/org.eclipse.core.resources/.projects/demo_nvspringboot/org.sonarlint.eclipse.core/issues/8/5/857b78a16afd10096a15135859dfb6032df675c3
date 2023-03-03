@@ -1,0 +1,13 @@
+
+‡
+java:S1488A"\Immediately return this expression instead of assigning it to the temporary variable "list".(ñ©÷hHÎRMINORZ
+CODE_SMELL
+Š
+java:S22936"YReplace the type specification in this constructor call with the diamond operator ("<>").(çßª‰ûÿÿÿÿHÌRMINORZ
+CODE_SMELL
+„
+java:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(«º¯QHÈRMINORZ
+CODE_SMELL
+…
+java:S2293("YReplace the type specification in this constructor call with the diamond operator ("<>").(ŠÀã€HÊRMINORZ
+CODE_SMELL

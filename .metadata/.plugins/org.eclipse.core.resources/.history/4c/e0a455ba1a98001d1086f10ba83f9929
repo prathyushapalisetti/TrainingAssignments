@@ -1,0 +1,38 @@
+package com.capgemini.university_course_selection.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.capgemini.university_course_selection.entity.Login;
+import com.capgemini.university_course_selection.exception.AdminException;
+import com.capgemini.university_course_selection.repository.AdminRepository;
+
+public class AdminServiceImpl implements AdminService {
+	
+	@Autowired
+	AdminRepository adminRepo;
+
+	@Override
+	public String getAdminDetails(Login log) throws AdminException {
+		
+		try {
+			
+			validateRequest (log);
+			
+			Admin admin = adminRepo.findByAdminNameAndAdminPassword(log.getUserName(), log.getPassword());
+			
+			if(admin != null) {
+				return String.valueOf(admin.getAdminId());
+				
+			}else {
+				return "User not found";
+			}
+			
+		}catch (AdminException ae) {
+			return ae.getMessage();
+		}
+		
+		
+		
+	}
+
+}

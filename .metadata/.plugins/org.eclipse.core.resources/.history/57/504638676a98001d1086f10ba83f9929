@@ -1,0 +1,51 @@
+package com.capgemini.university_course_selection.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+import lombok.ToString;
+
+
+@Table(name = "list")
+@ToString
+@Data
+@Entity
+
+public class Login {
+	@Id
+	@Column(name = "studentID")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private long studentId;
+	
+	@Column(name = "studentPassword")
+	private String password;
+	
+
+	public long getstudentId() {
+		return studentId;
+	}
+
+	public void setstudentId(long studentId) {
+		this.studentId = studentId;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String Password) {
+		this.password = password;
+	}
+		
+		public Login(long studentId, String Password) {
+			super();
+			this.studentId = studentId;
+			this.password = Password;
+		}
+	
+}

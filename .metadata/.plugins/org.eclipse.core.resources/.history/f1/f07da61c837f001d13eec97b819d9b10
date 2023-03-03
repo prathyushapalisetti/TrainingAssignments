@@ -1,0 +1,20 @@
+package exceptionhandlingpractice;
+
+public class ExceptionBasics {
+
+	public static void main(String[] args) {
+	
+		try {
+//			int div = 100 / 10;
+//			System.out.println(div);
+			
+			String s = null;
+			System.out.println(s.length());
+			
+		} catch (ArithmeticException e) {
+			System.out.println("please enter the correct input");
+		} catch (NullPointerException e1) {
+			System.out.println("please enter the correct lenght");
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package com.capgemini.university_course_selection.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.capgemini.university_course_selection.entity.LoginEntity;
+
+public interface LoginRepository extends JpaRepository<LoginEntity,Integer> {
+	
+	
+
+}

@@ -1,0 +1,19 @@
+package regularexpressionpractice;
+
+public class RegularExpressionConditions {
+
+	public static void main(String[] args) {
+		
+		String str = "abcde";
+		checkValue(str);
+	}
+	
+	public static void checkValue(String valu) {
+		if(value.matches("^[a-z]+"))
+			System.out.println("true");
+		else
+			System.out.println("false");
+    }
+}
+
+// 1) value should contain only alphabets a-z A-Z -> ^[a-z]+

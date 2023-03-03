@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AdminServiceImplTest" project="com.UniversityCourseSelection" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.UniversityCourseSelection.AdminServiceImplTest" time="1.036" displayname="AdminServiceImplTest" uniqueid="[engine:junit-jupiter]/[class:com.UniversityCourseSelection.AdminServiceImplTest]">
+    <testcase name="testGetAdmin" classname="com.UniversityCourseSelection.AdminServiceImplTest" time="1.017" displayname="testGetAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.UniversityCourseSelection.AdminServiceImplTest]/[method:testGetAdmin()]"/>
+    <testcase name="testSaveAdmin" classname="com.UniversityCourseSelection.AdminServiceImplTest" time="0.009" displayname="testSaveAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.UniversityCourseSelection.AdminServiceImplTest]/[method:testSaveAdmin()]"/>
+    <testcase name="testLoginAdmin" classname="com.UniversityCourseSelection.AdminServiceImplTest" time="0.007" displayname="testLoginAdmin()" uniqueid="[engine:junit-jupiter]/[class:com.UniversityCourseSelection.AdminServiceImplTest]/[method:testLoginAdmin()]"/>
+  </testsuite>
+</testrun>

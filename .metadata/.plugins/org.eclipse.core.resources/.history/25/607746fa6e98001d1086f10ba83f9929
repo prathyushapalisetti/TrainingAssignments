@@ -1,0 +1,14 @@
+package com.capgemini.university_course_selection.service;
+
+import com.capgemini.university_course_selection.entity.Login;
+import com.capgemini.university_course_selection.exception.IdAlreadyExistsException;
+
+
+public interface LoginService {
+
+	Login saveLogin(Login log1) throws IdAlreadyExistsException;
+
+
+   
+
+}

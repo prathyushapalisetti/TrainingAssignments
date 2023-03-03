@@ -1,0 +1,17 @@
+package com.capgemini.university_course_selection.exception;
+
+public class IdAlreadyExistsException  extends Exception {
+	
+
+	private String msg;
+	
+	public IdAlreadyExistsException(String msg) {
+		super();
+		this.msg = msg;
+	}
+	
+	public IdAlreadyExistsException() {
+		super();
+	}
+
+}

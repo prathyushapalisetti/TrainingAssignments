@@ -1,0 +1,21 @@
+package com.capgemini.university_course_selection.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.university_course_selection.service.LoginService;
+
+@RestController
+public class LoginController {
+	@Autowired
+	private LoginService logService;
+	
+	@PostMapping("/getLogin")
+	public String getLogin(@RequestBody Login log) {
+		Login log1=logService.getLogin(log);
+		return "loged in successfully";
+	}
+}
+	

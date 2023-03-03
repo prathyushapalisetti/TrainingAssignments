@@ -1,0 +1,59 @@
+package com.capgemini.university_course_selection.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.university_course_selection.entity.Staff;
+import com.capgemini.university_course_selection.exception.StaffIdAlreadyExistsException;
+import com.capgemini.university_course_selection.repository.StaffRepository;
+
+@Service
+public class StaffServiceImpl implements StaffService{
+	@Autowired
+	private StaffRepository stRepo;
+	
+	@Override
+	public Staff saveStaff(Staff s) throws StaffIdAlreadyExistsException {
+		if(stRepo.existsById(s.getStaff_Id()))
+			throw new StaffIdAlreadyExistsException();
+	/*	if(stRepo.existsByStaff_Name(s.getStaff_Name()))
+			throw new UserAlreadyExist();*/
+		Staff st = stRepo.save(s);
+		return st;
+	}
+	@Override
+	public List<Staff> getAllStaff() {
+		List<Staff> Staff = stRepo.findAll();
+		return Staff;
+	}
+	@Override
+	public Optional<Staff> getStaffById(long Id) {
+		Optional<Staff> Staff = stRepo.findById(Id);
+		return Staff;
+	}
+	@Override
+	public Staff updateStaffById(Staff s) {
+		Staff Staff = stRepo.save(s);
+		return Staff;
+	}
+
+	@Override
+	public void deleteStaffById(long Id) {
+			stRepo.deleteById(Id);
+			
+		
+	}
+	@Override
+	public void deleteStaffById(Long Id) {
+		stRepo.deleteById(Id);		
+	}
+	/*@Override
+	public Staff updateStaff(Staff s) {
+		Staff Staff = stRepo.save(s);
+		return null;
+	}*/
+
+}
